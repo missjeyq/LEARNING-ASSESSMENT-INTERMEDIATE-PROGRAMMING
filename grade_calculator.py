@@ -1,51 +1,45 @@
-print("Grade Calculator")
-user_score = int(input("Enter your score here (0-100): "))
-if user_score < 0 or user_score > 100:
+print("===Grade Calculator===")
+
+score = float(input("Enter your score here (0-100): "))
+if score < 0 or score > 100:
     print("Invalid Scores: Enter a value between 0 and 100.")
 
-elif user_score <= 100 and user_score >= 94:
+elif score <= 100 and score >= 94:
     grade = "A+"
     message = "Very Good"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 93 and user_score >= 90:
+elif score <= 93 and score >= 90:
     grade = "A-"
     message = "Nice"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 89 and user_score >= 87:
+elif score <= 89 and score >= 87:
     grade = "B+"
     message = "Good"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 86 and user_score >= 83:
+elif score <= 86 and score >= 83:
     grade = "B"
     message = "Ayos"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 83 and user_score >= 80:
+elif score <= 82 and score >= 80:
     grade = "B-"
     message = "Pede ka ha"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 79 and user_score >= 77:
+elif score <= 79 and score >= 77:
     grade = "C+"
     message = "Okay na din"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 76 and user_score >= 73:
+elif score <= 76 and score >= 73:
     grade = "C"
     message = "Solid"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 72 and user_score >= 67:
+elif score <= 72 and score >= 70:
     grade = "C-"
     message = "Ngii"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 66 and user_score >= 60:
+elif score <= 69 and score >= 67:
     grade = "D+"
     message = "Passed"
-    print("Score:",user_score, "Grade:",grade, "-",message)
-elif user_score <= 59:
+elif score <= 66 and score >= 60:
     grade = "D"
+    message = "Ayy"
+elif score <= 59:
+    grade = "F"
     message = "Failed"
-    print("Score:",user_score, "Grade:",grade, "-",message)
 else:
     print()
-    
-    
+print("Score:",score, "Grade:",grade, "-",message)
+
 #base system
-#https://share.google/JqVhu0mf5SDTe5V7y
+#https://share.google/1NtXqNPL0ikgmxxH8
