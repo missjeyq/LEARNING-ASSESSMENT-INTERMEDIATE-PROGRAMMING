@@ -1,4 +1,3 @@
-
 items = {
     1: ("Phone Stand", 30),
     2: ("USB Cable", 25),
@@ -31,12 +30,12 @@ for i in range(1, 4):
         continue
     
     if item_num in items:
-        qty = int(input("Enter quantity: "))
+        quantity = int(input("Enter quantity: "))
         name, price = items[item_num]
-        item_total = price * qty
+        item_total = price * quantity
         
         subtotal += item_total
-        orders.append((name, qty, item_total))
+        orders.append((name, quantity, item_total))
     else:
         print("Invalid item number. Skipped.")
 
@@ -56,7 +55,7 @@ if amount_paid < total:
 else:
     change = amount_paid - total
 
-    
+    print("\n---- TECH ESSENTIALS HUB ----")
     print("\n========== RECEIPT ==========")
     print(f"Cashier : {cashier}")
     print(f"Customer: {customer}")
@@ -67,8 +66,8 @@ else:
     
     print("------------------------------")
     print(f"Subtotal : ₱{subtotal:.2f}")
-    print(f"Discount : ₱{discount:.2f}")
+    print(f"Techie Discount : ₱{discount:.2f}")
     print(f"Total    : ₱{total:.2f}")
     print(f"Paid     : ₱{amount_paid:.2f}")
     print(f"Change   : ₱{change:.2f}")
-    print("=============================="
+    print("==============================")
