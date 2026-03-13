@@ -51,7 +51,7 @@ total = subtotal - discount
 amount_paid = float(input("\nEnter amount paid: ₱"))
 
 if amount_paid < total:
-    print("Amount is not enough. Please pay the full amount.")
+    print("Amount is not enough. Kindly pay the full amount.")
 else:
     change = amount_paid - total
 
