@@ -1,0 +1,73 @@
+items = {
+    1: ("Phone Stand", 30),
+    2: ("USB Cable", 25),
+    3: ("Screen Wiper", 15),
+    4: ("Earbuds", 45),
+    5: ("Webcam Cover", 20)
+}
+
+
+cashier = input("Enter cashier's name: ")
+customer = input("Enter customer's name: ")
+
+
+print("\n------ PRICE LIST ------")
+print("1 - Phone Stand   : ₱30")
+print("2 - USB Cable     : ₱25")
+print("3 - Screen Wiper  : ₱15")
+print("4 - Earbuds       : ₱45")
+print("5 - Webcam Cover  : ₱20")
+print("------------------------\n")
+
+orders = []
+subtotal = 0
+
+
+for i in range(1, 4):
+    item_num = int(input(f"Order {i} - Enter item number (1-5) or 0 to skip: "))
+    
+    if item_num == 0:
+        continue
+    
+    if item_num in items:
+        quantity = int(input("Enter quantity: "))
+        name, price = items[item_num]
+        item_total = price * quantity
+        
+        subtotal += item_total
+        orders.append((name, quantity, item_total))
+    else:
+        print("Invalid item number. Skipped.")
+
+
+
+discount = 0
+if subtotal >= 100:
+    discount = subtotal * 0.10
+
+total = subtotal - discount
+
+
+amount_paid = float(input("\nEnter amount paid: ₱"))
+
+if amount_paid < total:
+    print("Sorry amount is not enough. Kindly pay the full amount.")
+else:
+    change = amount_paid - total
+
+    print("\n---- TECH ESSENTIALS HUB ----")
+    print("\n========== RECEIPT ==========")
+    print(f"Cashier : {cashier}")
+    print(f"Customer: {customer}")
+    print("------------------------------")
+    
+    for item in orders:
+        print(f"{item[0]} x{item[1]} = ₱{item[2]}")
+    
+    print("------------------------------")
+    print(f"Subtotal : ₱{subtotal:.2f}")
+    print(f"Techie Discount : ₱{discount:.2f}")
+    print(f"Total    : ₱{total:.2f}")
+    print(f"Paid     : ₱{amount_paid:.2f}")
+    print(f"Change   : ₱{change:.2f}")
+    print("==============================")
